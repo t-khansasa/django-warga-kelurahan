@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detail Warga - {{ object.nama_lengkap }}</title>
+</head>
+<body>
+    <h1>Detail Data Warga</h1>
+
+    <p><strong>Nama Lengkap:</strong> {{ object.nama_lengkap }}</p>
+    <p><strong>NIK:</strong> {{ object.nik }}</p>
+    <p><strong>Alamat:</strong> {{ object.alamat }}</p>
+    <p><strong>Jenis Kelamin:</strong> {{ object.jenis_kelamin }}</p>
+    <p><strong>Tanggal Lahir:</strong> {{ object.tanggal_lahir }}</p>
+    <p><strong>Pekerjaan:</strong> {{ object.pekerjaan }}</p>
+
+    <br>
+    <a href="{% url 'warga_list' %}">Kembali ke Daftar Warga</a>
+</body>
+</html>
