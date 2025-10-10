@@ -16,6 +16,9 @@
                 Pelapor: {{ aduan.pelapor.nama_lengkap }}<br>
                 <p>{{ aduan.deskripsi }}</p>
                 <small>Dilaporkan pada: {{ aduan.tanggal_lapor|date:"d M Y H:i" }}</small>
+
+                <a href="{% url 'pengaduan-edit' aduan.pk %}">Edit</a> |
+                <a href="{% url 'pengaduan-hapus' aduan.pk %}">Hapus</a>
             </li>
             <hr>
         {% empty %}
