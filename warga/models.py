@@ -21,6 +21,7 @@ class Pengaduan(models.Model):
     deskripsi = models.TextField()
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='BARU')
     tanggal_lapor = models.DateTimeField(auto_now_add=True)
+    
     pelapor = models.ForeignKey(Warga, on_delete=models.CASCADE, related_name='pengaduan')
 
     def __str__(self):
